@@ -52,6 +52,27 @@ function fetchingData(){
                 })
 }
 
+function currentLocation(){
+    let long;
+    let lat;
+
+    if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(position => {
+           lat = position.coords.latitude  ;
+           long = position.coords.longitude;
+           console.log(lat,long);
+
+            api = `${proxy}http://api.weatherapi.com/v1/current.json?key=abefdc922fbb46fc94a95020200611&q=${lat},${long}`;
+            
+            setTimeout(()=>{
+                fetchingData();
+            }, 1000);
+            
+            
+        })
+    }
+}
+
 
 function searchWeather(e){
     if(e.keyCode == 13){
