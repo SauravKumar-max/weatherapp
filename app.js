@@ -76,6 +76,12 @@ function currentLocation(){
 
 function searchWeather(e){
     if(e.keyCode == 13){
+        holder.style.display = "flex";
+        api = `${proxy}https://api.weatherapi.com/v1/current.json?key=abefdc922fbb46fc94a95020200611&q=${searchEl.value}`;
+        searchEl.value = "";
+        setTimeout(()=>{
+            fetchingData();
+        }, 2000);
         
     }
     
