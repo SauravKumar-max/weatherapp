@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(-89deg ,rgb(47,150,163), rgb(48,62,143));
+    color: #fff;
+    height: 100%;
+}
+
+.holder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color:rgba(171, 191, 207, 0.662);
+}
+
+.loader{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    opacity: 0;
+    background: #fff;
+    animation: fader 1.8s linear infinite;
+}
+
+.loader1{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    opacity: 0;
+    background: #fff;
+    animation: fader 1.8s linear infinite;
+    animation-delay: 0.8s;
+}
