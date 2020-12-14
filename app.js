@@ -1,4 +1,13 @@
+const celciusEl = document.querySelector('.celcius');
+const fahrenheitEl = document.querySelector('.fahrenheit');
+const placeName= document.querySelector('.name');
+const holder = document.querySelector(".holder");
+const imageEl = document.querySelector(".image");
+const humidEL = document.querySelector(".humidity");
+const condEL = document.querySelector(".text");
+const uvEl = document.querySelector(".uvray");
 const searchEl = document.querySelector(".search");
+const weatherInfo = document.querySelector(".weather");
 
 const proxy = 'https://cors-anywhere.herokuapp.com/';
 let api = "";
@@ -52,6 +61,7 @@ function fetchingData(){
                 })
 }
 
+
 function currentLocation(){
     let long;
     let lat;
@@ -73,7 +83,6 @@ function currentLocation(){
     }
 }
 
-
 function searchWeather(e){
     if(e.keyCode == 13){
         holder.style.display = "flex";
@@ -88,3 +97,5 @@ function searchWeather(e){
 }
 
 searchEl.addEventListener('keyup', searchWeather);
+
+window.addEventListener('load',currentLocation);
