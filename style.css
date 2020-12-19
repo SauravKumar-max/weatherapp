@@ -138,8 +138,8 @@ body{
     }
 
     .condition div{
-        width: 80px;
+        width: 90px;
         margin: 5px;
-        font-size: 10px;
+        font-size: 12px;
     }
 }
